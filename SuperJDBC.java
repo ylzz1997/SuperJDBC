@@ -20,7 +20,7 @@ public class SuperJDBC {
 		}catch(ClassNotFoundException e)
 		{
 			if(Debug)
-			System.out.println("MysqlÇı¶¯¼ÓÔØÊ§°Ü");
+			System.out.println("Mysqlé©±åŠ¨åŠ è½½å¤±è´¥");
 		}
 		
 		try{
@@ -29,7 +29,7 @@ public class SuperJDBC {
 		}catch(ClassNotFoundException e)
 		{
 			if(Debug)
-			System.out.println("OracleÇı¶¯¼ÓÔØÊ§°Ü");
+			System.out.println("Oracleé©±åŠ¨åŠ è½½å¤±è´¥");
 		}
 		
 		try{
@@ -38,7 +38,7 @@ public class SuperJDBC {
 		}catch(ClassNotFoundException e)
 		{
 			if(Debug)
-			System.out.println("SqlServeÇı¶¯¼ÓÔØÊ§°Ü");
+			System.out.println("SqlServeé©±åŠ¨åŠ è½½å¤±è´¥");
 		}
 		
 		try{
@@ -47,7 +47,7 @@ public class SuperJDBC {
 		}catch(ClassNotFoundException e)
 		{
 			if(Debug)
-			System.out.println("PostgreSQLÇı¶¯¼ÓÔØÊ§°Ü");
+			System.out.println("PostgreSQLé©±åŠ¨åŠ è½½å¤±è´¥");
 		}
 		
 		try{
@@ -56,7 +56,7 @@ public class SuperJDBC {
 		}catch(ClassNotFoundException e)
 		{
 			if(Debug)
-			System.out.println("DB2Çı¶¯¼ÓÔØÊ§°Ü");
+			System.out.println("DB2é©±åŠ¨åŠ è½½å¤±è´¥");
 		}
 		
 		try{
@@ -65,7 +65,7 @@ public class SuperJDBC {
 		}catch(ClassNotFoundException e)
 		{
 			if(Debug)
-			System.out.println("sybaseÇı¶¯¼ÓÔØÊ§°Ü");
+			System.out.println("sybaseé©±åŠ¨åŠ è½½å¤±è´¥");
 		}
 	}
 	
@@ -102,17 +102,17 @@ public class SuperJDBC {
 			allUrl="jdbc:postgresql://"+ip+":"+Port+"/"+DB;
 		else
 		{
-			System.out.println("ÇëÊäÈëÓĞĞ§ÀàĞÍ£¬²¢È·ÈÏÇı¶¯¼ÓÔØ³É¹¦£¡");
+			System.out.println("è¯·è¾“å…¥æœ‰æ•ˆç±»å‹ï¼Œå¹¶ç¡®è®¤é©±åŠ¨åŠ è½½æˆåŠŸï¼");
 			return null;
 		}
 		try {
 			Connection conn=DriverManager.getConnection(allUrl,user,password);
 			if(Debug)
-			System.out.println("Á¬½ÓÊı¾İ¿â³É¹¦");
+			System.out.println("è¿æ¥æ•°æ®åº“æˆåŠŸ");
 			return conn;	
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æ•°æ®åº“è¿æ¥å¤±è´¥");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -136,17 +136,17 @@ public class SuperJDBC {
 			allUrl="jdbc:postgresql://"+ip+":"+Port+"/"+DB+"?useUnicode=true&characterEncoding="+Character;
 		else
 		{
-			System.out.println("ÇëÊäÈëÓĞĞ§ÀàĞÍ£¬²¢È·ÈÏÇı¶¯¼ÓÔØ³É¹¦£¡");
+			System.out.println("è¯·è¾“å…¥æœ‰æ•ˆç±»å‹ï¼Œå¹¶ç¡®è®¤é©±åŠ¨åŠ è½½æˆåŠŸï¼");
 			return null;
 		}
 		try {
 			Connection conn=DriverManager.getConnection(allUrl,user,password);
 			if(Debug)
-			System.out.println("Á¬½ÓÊı¾İ¿â³É¹¦");
+			System.out.println("è¿æ¥æ•°æ®åº“æˆåŠŸ");
 			return conn;	
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æ•°æ®åº“è¿æ¥å¤±è´¥");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -160,11 +160,11 @@ public class SuperJDBC {
 		try {
 			Connection conn=DriverManager.getConnection(allUrl);
 			if(Debug)
-			System.out.println("Á¬½ÓÊı¾İ¿â³É¹¦");
+			System.out.println("è¿æ¥æ•°æ®åº“æˆåŠŸ");
 			return conn;	
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æ•°æ®åº“è¿æ¥å¤±è´¥");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -178,7 +178,7 @@ public class SuperJDBC {
 			Statement stmt = link.createStatement();
 			ResultSet rs= stmt.executeQuery(query);
 			if(Debug)
-			System.out.println("×Ö¶Î²éÕÒ³É¹¦");
+			System.out.println("å­—æ®µæŸ¥æ‰¾æˆåŠŸ");
 			ResultSetMetaData rsmt=rs.getMetaData();
 			int cum=rsmt.getColumnCount();
 			if(rs.next())
@@ -192,8 +192,8 @@ public class SuperJDBC {
 				return null;
 			}
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("²éÑ¯Ê§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æŸ¥è¯¢å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -206,7 +206,7 @@ public class SuperJDBC {
 			Statement stmt = link.createStatement();
 			ResultSet rs= stmt.executeQuery(query);
 			if(Debug)
-			System.out.println("×Ö¶Î²éÕÒ³É¹¦");
+			System.out.println("å­—æ®µæŸ¥æ‰¾æˆåŠŸ");
 			if(rs.next())
 			{
 				return true;
@@ -214,8 +214,8 @@ public class SuperJDBC {
 				return false;
 			}
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("²éÑ¯Ê§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æŸ¥è¯¢å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return false;
@@ -229,7 +229,7 @@ public class SuperJDBC {
 			Statement stmt = link.createStatement();
 			ResultSet rs= stmt.executeQuery(query);
 			if(Debug)
-			System.out.println("×Ö¶Î²éÕÒ³É¹¦");
+			System.out.println("å­—æ®µæŸ¥æ‰¾æˆåŠŸ");
 			ResultSetMetaData rsmt=rs.getMetaData();
 			int cum=rsmt.getColumnCount();
 			while(rs.next())
@@ -252,7 +252,7 @@ public class SuperJDBC {
 		        return array;
 			}
 		} catch (SQLException e) {
-			System.out.println("²éÑ¯Ê§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			System.out.println("æŸ¥è¯¢å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -266,7 +266,7 @@ public class SuperJDBC {
 			if(data.size()==0)
 			{
 			if(Debug)
-			System.out.println("Çë´«ÈëÓĞĞ§Êı¾İ£¡");
+			System.out.println("è¯·ä¼ å…¥æœ‰æ•ˆæ•°æ®ï¼");
 			return false;
 			}
 			String val="";
@@ -286,17 +286,17 @@ public class SuperJDBC {
 			if(rs>0)
 			{
 				if(Debug)
-				System.out.println("²åÈë³É¹¦");
+				System.out.println("æ’å…¥æˆåŠŸ");
 				return true;
 			}else{
 				if(Debug)
-				System.out.println("²åÈëÊ§°Ü");
+				System.out.println("æ’å…¥å¤±è´¥");
 				return false;
 			}
 			
 		}catch (SQLException e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-				System.out.println("Ìí¼ÓÊ§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+				System.out.println("æ·»åŠ å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 				System.out.print("ERROR:"+e.getMessage());
 				e.printStackTrace();
 				return false;
@@ -310,7 +310,7 @@ public class SuperJDBC {
 			if(data.size()==0)
 			{
 			if(Debug)
-			System.out.println("Çë´«ÈëÓĞĞ§Êı¾İ£¡");
+			System.out.println("è¯·ä¼ å…¥æœ‰æ•ˆæ•°æ®ï¼");
 			return false;
 			}
 			String val="";
@@ -326,16 +326,16 @@ public class SuperJDBC {
 			if(rs>0)
 			{
 				if(Debug)
-				System.out.println("ĞŞ¸Ä³É¹¦");
+				System.out.println("ä¿®æ”¹æˆåŠŸ");
 				return true;
 			}else{
 				if(Debug)
-				System.out.println("ĞŞ¸ÄÊ§°Ü");
+				System.out.println("ä¿®æ”¹å¤±è´¥");
 				return false;
 			}
 		}catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("¸üĞÂÊ§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æ›´æ–°å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return false;
@@ -351,15 +351,15 @@ public class SuperJDBC {
 		if(rs>0)
 		{
 			if(Debug)
-			System.out.println("É¾³ı³É¹¦");
+			System.out.println("åˆ é™¤æˆåŠŸ");
 			return true;
 		}else{
 			if(Debug)
-			System.out.println("É¾³ıÊ§°Ü");
+			System.out.println("åˆ é™¤å¤±è´¥");
 			return false;
 		}
 		}catch (SQLException e) {
-			System.out.println("¸üĞÂÊ§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			System.out.println("æ›´æ–°å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return false;
@@ -374,15 +374,15 @@ public class SuperJDBC {
 		if(rs>0)
 		{
 			if(Debug)
-			System.out.println("´¦Àí³É¹¦");
+			System.out.println("å¤„ç†æˆåŠŸ");
 			return true;
 		}else{
 			if(Debug)
-			System.out.println("´¦ÀíÊ§°Ü");
+			System.out.println("å¤„ç†å¤±è´¥");
 			return false;
 		}
 		}catch (SQLException e) {
-			System.out.println("¸üĞÂÊ§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			System.out.println("æ›´æ–°å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return false;
@@ -397,15 +397,15 @@ public class SuperJDBC {
 		if(rtn!=null)
 		{
 			if(Debug)
-			System.out.println("·µ»Ø³É¹¦");
+			System.out.println("è¿”å›æˆåŠŸ");
 			return rtn;
 		}else{
 			if(Debug)
-			System.out.println("Îª¿Õ");
+			System.out.println("ä¸ºç©º");
 			return null;
 		}
 		}catch (SQLException e) {
-			System.out.println("·µ»ØÊ§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			System.out.println("è¿”å›å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -420,15 +420,15 @@ public class SuperJDBC {
 		if(rtn!=null)
 		{
 			if(Debug)
-			System.out.println("·µ»Ø³É¹¦");
+			System.out.println("è¿”å›æˆåŠŸ");
 			return rtn;
 		}else{
 			if(Debug)
-			System.out.println("Îª¿Õ");
+			System.out.println("ä¸ºç©º");
 			return null;
 		}
 		}catch (SQLException e) {
-			System.out.println("·µ»ØÊ§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			System.out.println("è¿”å›å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -461,7 +461,7 @@ public class SuperJDBC {
 	        return array;
 		}
 		}catch (SQLException e) {
-			System.out.println("×ª»»Ê§°Ü£¡");
+			System.out.println("è½¬æ¢å¤±è´¥ï¼");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -474,12 +474,12 @@ public class SuperJDBC {
 			Statement stmt = link.createStatement();
 			ResultSet rs= stmt.executeQuery("SELECT * FROM "+table+" LIMIT 0,1");
 			if(Debug)
-			System.out.println("×Ö¶Î²éÕÒ³É¹¦");
+			System.out.println("å­—æ®µæŸ¥æ‰¾æˆåŠŸ");
 			ResultSetMetaData rsmt=rs.getMetaData();
 			return rsmt;
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("²éÑ¯Ê§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æŸ¥è¯¢å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return null;
@@ -492,13 +492,13 @@ public class SuperJDBC {
 			Statement stmt = link.createStatement();
 			ResultSet rs= stmt.executeQuery("SELECT * FROM "+table+" LIMIT 0,1");
 			if(Debug)
-			System.out.println("×Ö¶Î²éÕÒ³É¹¦");
+			System.out.println("å­—æ®µæŸ¥æ‰¾æˆåŠŸ");
 			ResultSetMetaData rsmt=rs.getMetaData();
 			int num = rsmt.getColumnCount();
 			System.out.println("\t*-------------------------------------------*");
-			System.out.println("\t±í¸ñÃû³Æ:"+table);
-			System.out.println("\t±í¸ñÁĞÊı:"+num);
-			System.out.println("\t±í¸ñ×Ö¶Î:");
+			System.out.println("\tè¡¨æ ¼åç§°:"+table);
+			System.out.println("\tè¡¨æ ¼åˆ—æ•°:"+num);
+			System.out.println("\tè¡¨æ ¼å­—æ®µ:");
 			for(int i=1;i<=num;i++)
 			{
 				String name ="("+rsmt.getColumnTypeName(i)+")"+"["+rsmt.getColumnDisplaySize(i)+"]"+rsmt.getColumnName(i);
@@ -511,8 +511,8 @@ public class SuperJDBC {
 			}
 			System.out.println("\t*--------------------END--------------------*");
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("²éÑ¯Ê§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æŸ¥è¯¢å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 		}
@@ -524,11 +524,11 @@ public class SuperJDBC {
 			DatabaseMetaData dbmd = link.getMetaData();	
 			ResultSet dbrs =  dbmd.getTables(null, null, null,new String[] { "TABLE" });
 			System.out.println("\t*-------------------------------------------*");
-			System.out.println("\tÊı¾İ¿âÃû³Æ:"+dbmd.getDatabaseProductName()+" "+dbmd.getJDBCMajorVersion());
-			System.out.println("\tÊı¾İ¿â°æ±¾:"+dbmd.getDatabaseProductVersion());
-			System.out.println("\tÊı¾İ¿âÇı¶¯:"+dbmd.getDriverVersion());
-			System.out.println("\tÊı¾İ¿âÀàĞÍ:"+dbmd.getTypeInfo());
-			System.out.print("\tÊı¾İ¿âÄÚ±í:");
+			System.out.println("\tæ•°æ®åº“åç§°:"+dbmd.getDatabaseProductName()+" "+dbmd.getJDBCMajorVersion());
+			System.out.println("\tæ•°æ®åº“ç‰ˆæœ¬:"+dbmd.getDatabaseProductVersion());
+			System.out.println("\tæ•°æ®åº“é©±åŠ¨:"+dbmd.getDriverVersion());
+			System.out.println("\tæ•°æ®åº“ç±»å‹:"+dbmd.getTypeInfo());
+			System.out.print("\tæ•°æ®åº“å†…è¡¨:");
 			for(int n=1;dbrs.next();n++)
 			{ 
 				System.out.print(dbrs.getString(3)+"\t");
@@ -538,8 +538,8 @@ public class SuperJDBC {
 			System.out.println();
 			System.out.println("\t*--------------------END--------------------*");
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
-			System.out.println("²éÑ¯Ê§°Ü£¬²»´æÔÚµÄ´ÊÌõ!");
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
+			System.out.println("æŸ¥è¯¢å¤±è´¥ï¼Œä¸å­˜åœ¨çš„è¯æ¡!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 		}
@@ -570,16 +570,16 @@ public class SuperJDBC {
 		BW.write("</resultSet>\r\n");
 		BW.close();
 		if(Debug)
-		System.out.println("Êä³ö³É¹¦");
+		System.out.println("è¾“å‡ºæˆåŠŸ");
 		return true;
 		}catch (IOException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			if(Debug)
-			System.out.println("ÎÄ¼ş´´½¨Ê§°Ü");
+			System.out.println("æ–‡ä»¶åˆ›å»ºå¤±è´¥");
 			e.printStackTrace();
 			return false;
 		}catch (SQLException e) {
-			System.out.println("Á¬½ÓÊı¾İ¿âÊ§°Ü!");
+			System.out.println("è¿æ¥æ•°æ®åº“å¤±è´¥!");
 			System.out.print("ERROR:"+e.getMessage());
 			e.printStackTrace();
 			return false;
@@ -595,7 +595,7 @@ public class SuperJDBC {
 		if(rsmap==null)
 		{
 			if(Debug)
-			System.out.println("½á¹û¼¯Îª¿Õ");
+			System.out.println("ç»“æœé›†ä¸ºç©º");
 			BW.close();
 			return false;
 		}
@@ -622,35 +622,14 @@ public class SuperJDBC {
 		BW.write("]}\r\n");
 		BW.close();
 		if(Debug)
-		System.out.println("Êä³ö³É¹¦");
+		System.out.println("è¾“å‡ºæˆåŠŸ");
 		return true;
 		}catch (IOException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			if(Debug)
-			System.out.println("ÎÄ¼ş´´½¨Ê§°Ü");
+			System.out.println("æ–‡ä»¶åˆ›å»ºå¤±è´¥");
 			e.printStackTrace();
 			return false;
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		SuperJDBC.DriverInfo();
-		SuperJDBC.Debug(true);
-		Connection link=SuperJDBC.Connect("mysql", "localhost", "3306", "640_schema","root","root");
-		LinkedHashMap<String,String>[] a = SuperJDBC.fetchAll(link, "SELECT * FROM student");
-		for(LinkedHashMap<String,String> val : a)
-		{
-			System.out.println("ĞÕÃû:"+val.get("name")+" ÄêÁä:"+val.get("age")+" ĞÔ±ğ:"+val.get("sex"));
-		}
-		LinkedHashMap<String,String> data= new LinkedHashMap<String,String>();
-		data.put("name", "Çó´óÊ¦");
-		data.put("age", "56");
-		data.put("sex", "ÄĞ");
-		SuperJDBC.tableInfo(link, "student");
-		SuperJDBC.databaseInfo(link);
-		SuperJDBC.resultSetToXML(SuperJDBC.BackResultSet(link, "SELECT * FROM student"),"result.xml");
-		SuperJDBC.resultSetToJson(SuperJDBC.BackResultSet(link, "SELECT * FROM student"),"result.json");
-		
 	}
 }
